@@ -27,8 +27,8 @@
         </a>
         <nav class="nav__rail" aria-label="Primary">
           <ul>
-            <li><a class="nav__link" href="#projects" data-i18n="nav.projects">Projects</a></li>
             <li><a class="nav__link" href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a class="nav__link" href="#projects" data-i18n="nav.projects">Projects</a></li>
             <li><a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </nav>
@@ -41,7 +41,9 @@
           <button class="theme" type="button" data-theme-toggle aria-label="Switch to dark theme">
             <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7.25" /><path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z" /></svg>
           </button>
-          <a class="theme" href="https://github.com/chrisremillard/portfolio" target="_blank" rel="noopener" data-i18n-label="icon.repo" aria-label="Source code of this site on GitHub" title="Source code of this site on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a class="theme" href="https://github.com/chrisremillard/portfolio" target="_blank" rel="noopener" data-i18n-label="icon.repo" aria-label="Source code of this site on GitHub"
+            title="Source code of this site on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg></a>
           <a class="btn btn--outline" href="assets/Christopher-Remillard-CV.pdf" download>
             <span class="btn__long" data-i18n="cta.cv">Download resume</span>
             <span class="btn__short" aria-hidden="true" data-i18n="cta.cv.short">Resume</span>
@@ -54,27 +56,32 @@
       <!-- Hero -->
       <section class="hero" id="top">
         <div class="hero__copy reveal">
-          <p class="hero__who"><span data-i18n="hero.who">Infrastructure and cloud analyst</span> · Beneva</p>
+          <p class="hero__who"><span data-i18n="hero.who">Infrastructure and cloud analyst</span></p>
           <h1 data-i18n="hero.title">I build the platforms developers deploy on.</h1>
           <p class="lede" data-i18n="hero.lede">I work on the cloud team at Beneva, where we give developers a flexible, secure infrastructure for deploying applications on Kubernetes.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="assets/Christopher-Remillard-CV.pdf" download data-i18n="cta.cv">Download resume</a>
-            <a class="icon-link icon-link--line" href="mailto:chrisremillard97@gmail.com" data-i18n-label="icon.mail" aria-label="Email Christopher" title="Email Christopher"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7.5 12 13.5l8.5-6"/></svg></a>
-          <a class="icon-link" href="https://www.linkedin.com/in/christopher-r%C3%A9millard-8165b924a" target="_blank" rel="noopener" data-linkedin data-i18n-label="icon.linkedin" aria-label="LinkedIn profile" title="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a class="icon-link" href="https://github.com/chrisremillard" target="_blank" rel="noopener" data-i18n-label="icon.github" aria-label="GitHub profile" title="GitHub profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a class="icon-link icon-link--line" href="mailto:chrisremillard97@gmail.com" data-i18n-label="icon.mail" aria-label="Email Christopher" title="Email Christopher"><svg viewBox="0 0 24 24"
+                aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3.5 7.5 12 13.5l8.5-6" /></svg></a>
+            <a class="icon-link" href="https://www.linkedin.com/in/christopher-r%C3%A9millard-8165b924a" target="_blank" rel="noopener" data-linkedin data-i18n-label="icon.linkedin"
+              aria-label="LinkedIn profile" title="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg></a>
+            <a class="icon-link" href="https://github.com/chrisremillard" target="_blank" rel="noopener" data-i18n-label="icon.github" aria-label="GitHub profile" title="GitHub profile"><svg
+                viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg></a>
           </div>
         </div>
 
         <figure class="code-card reveal" style="--i: 1">
           <figcaption class="code-card__bar">
             <span>christopher.yaml</span>
-            <span class="status"><span class="status__dot" aria-hidden="true"></span>Running</span>
+            <span class="status"><span class="status__dot" aria-hidden="true"></span><span data-phase="Running">Running</span></span>
           </figcaption>
           <pre class="code" aria-label="Profile, written as a Kubernetes manifest"><code><span class="tok-key">apiVersion</span><span class="tok-p">:</span> v1
 <span class="tok-key">kind</span><span class="tok-p">:</span> Analyst
 <span class="tok-key">metadata</span><span class="tok-p">:</span>
   <span class="tok-key">name</span><span class="tok-p">:</span> christopher-remillard
-  <span class="tok-key">location</span><span class="tok-p">:</span> Blainville, QC
+  <span class="tok-key">location</span><span class="tok-p">:</span> Montreal, QC
 <span class="tok-key">spec</span><span class="tok-p">:</span>
   <span class="tok-key">team</span><span class="tok-p">:</span> cloud
   <span class="tok-key">employer</span><span class="tok-p">:</span> Beneva
@@ -82,8 +89,78 @@
   <span class="tok-key">platform</span><span class="tok-p">:</span> [kubernetes, eks, aws]
   <span class="tok-key">automation</span><span class="tok-p">:</span> [ansible, terraform]
 <span class="tok-key">status</span><span class="tok-p">:</span>
-  <span class="tok-key">phase</span><span class="tok-p">:</span> <span class="typed" data-typed="Running">Running</span></code></pre>
+  <span class="tok-key">phase</span><span class="tok-p">:</span> <span data-phase="Running">Running</span></code></pre>
         </figure>
+      </section>
+
+      <!-- Experience -->
+      <section class="section experience" id="experience">
+        <header class="section__head">
+          <h2 data-i18n="exp.title">Experience</h2>
+        </header>
+        <ol class="roles">
+          <li class="role">
+            <p class="role__when" data-i18n="exp.1.when">May 2025 – Present</p>
+            <div>
+              <h3 data-i18n="exp.1.role">Infrastructure and cloud analyst</h3>
+              <p class="role__org">Beneva</p>
+              <p data-i18n="exp.1.desc">Member of the cloud team. We give developers a flexible, secure infrastructure for deploying applications in a Kubernetes environment.</p>
+            </div>
+          </li>
+          <li class="role">
+            <p class="role__when" data-i18n="exp.2.when">Aug. 2023 – May 2025</p>
+            <div>
+              <h3 data-i18n="exp.2.role">Technology analyst</h3>
+              <p class="role__org">Beneva</p>
+              <p data-i18n="exp.2.desc">Member of the automation platform team. We maintained and evolved Ansible Automation Platform, and onboarded client teams into Ansible development.</p>
+            </div>
+          </li>
+          <li class="role">
+            <p class="role__when" data-i18n="exp.3.when">Aug. 2022 – Aug. 2023</p>
+            <div>
+              <h3 data-i18n="exp.3.role">Programmer</h3>
+              <p class="role__org">Beneva</p>
+              <p data-i18n="exp.3.desc">Part-time while continuing my university studies, I developed integrations for developers to make it easier to deploy their applications in the on-premise
+                environment.</p>
+            </div>
+          </li>
+          <li class="role">
+            <p class="role__when" data-i18n="exp.4.when">May 2022 – Aug. 2022</p>
+            <div>
+              <h3 data-i18n="exp.4.role">Intern</h3>
+              <p class="role__org">Beneva</p>
+              <p data-i18n="exp.4.desc">Intern in on-premise infrastructure. Our mandate was to build automated virtual machine lifecycle management with Ansible.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Stack + education -->
+      <section class="section toolkit" id="stack">
+        <div class="toolkit__stack">
+          <h2 data-i18n="stack.title">Stack</h2>
+          <dl class="stack">
+            <div><dt data-i18n="stack.cloud">Cloud</dt><dd>AWS</dd><dd>GCP</dd></div>
+            <div><dt data-i18n="stack.platform">Platform</dt><dd>EKS</dd><dd>VMware</dd><dd>Vault</dd><dd>Ansible Automation Platform</dd></div>
+            <div><dt data-i18n="stack.automation">Automation</dt><dd>Ansible</dd><dd>Terraform</dd></div>
+            <div><dt data-i18n="stack.lang">Languages</dt><dd>TypeScript</dd><dd>Nix</dd></div>
+          </dl>
+        </div>
+        <div class="toolkit__edu">
+          <h2 data-i18n="edu.title">Education</h2>
+          <ul class="edu">
+            <li>
+              <p class="role__when">2020 – 2023</p>
+              <h3 data-i18n="edu.1">Bachelor’s in computer science and software engineering</h3>
+              <p class="role__org">Université du Québec à Montréal</p>
+            </li>
+            <li>
+              <p class="role__when">2018 – 2020</p>
+              <h3 data-i18n="edu.2">Certificate in administration</h3>
+              <p class="role__org">Université du Québec à Montréal</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Projects -->
@@ -111,16 +188,18 @@
                   <path class="trail--4" d="M106 90A54 54 0 0 1 160 36" />
                 </g>
                 <g class="art__stops">
-                  <circle cx="160" cy="36" r="6" /><circle cx="214" cy="90" r="6" />
-                  <circle cx="160" cy="144" r="6" /><circle cx="106" cy="90" r="6" />
+                  <circle cx="214" cy="90" r="6" /><circle cx="160" cy="144" r="6" />
+                  <g class="form" transform="translate(160 36)"><rect x="-6" y="-7" width="12" height="14" rx="2" /><path d="M-3 -3H3M-3 0H3M-3 3H0" /></g>
+                  <g class="form" transform="translate(106 90)"><rect x="-6" y="-7" width="12" height="14" rx="2" /><path d="M-3 -3H3M-3 0H3M-3 3H0" /></g>
                 </g>
                 <g class="art__vm">
+                  <rect class="vm__ghost" x="134" y="72" width="52" height="36" rx="4" />
                   <rect class="vm__box" x="134" y="72" width="52" height="36" rx="4" />
-                  <rect class="vm__bar" x="142" y="81" width="22" height="5" rx="2.5" />
-                  <rect class="vm__bar" x="142" y="93" width="34" height="5" rx="2.5" />
+                  <rect class="vm__bar vm__bar--1" x="142" y="81" width="22" height="5" rx="2.5" />
+                  <rect class="vm__bar vm__bar--2" x="142" y="93" width="34" height="5" rx="2.5" />
                   <circle class="vm__dot" cx="176" cy="83.5" r="3" />
                 </g>
-                <g class="art__marker"><circle cx="160" cy="36" r="9" /></g>
+                <g class="art__marker"><circle cx="160" cy="36" r="11" /></g>
                 <g class="art__label art__label--mid">
                   <text class="stage" style="--n: 0" x="160" y="20">request</text>
                   <text class="stage" style="--n: 2" x="160" y="168">run</text>
@@ -132,8 +211,8 @@
             <div class="card__body">
               <p class="card__meta"><span class="tag" data-i18n="filter.automation">Automation</span><span class="tag tag--stack">Ansible · VMware · Jira</span></p>
               <h3 data-i18n="p1.title">Full virtual machine lifecycle with Ansible</h3>
-              <p data-i18n="p1.desc">My internship project at Beneva. System administrators created virtual machines by hand with scripts, and getting one took about two weeks. Now a Jira form kicks
-                off an Ansible workflow that delivers a Linux or Windows machine, up and ready in VMware, in 20 minutes. A second form deletes the machine when it is no longer needed.</p>
+              <p data-i18n="p1.desc">My internship project at Beneva. Getting a virtual machine meant waiting for system administrators to build it by hand with scripts. Now a Jira form triggers an
+                Ansible workflow that delivers a ready-to-use Linux or Windows machine in VMware, and a second form deletes it when it is no longer needed.</p>
               <dl class="card__facts">
                 <div><dt data-i18n="p1.before">Before</dt><dd data-i18n="p1.before.v">About 2 weeks</dd></div>
                 <div><dt data-i18n="p1.after">After</dt><dd>20 minutes</dd></div>
@@ -168,8 +247,13 @@
                 <circle class="sign__ok" cx="251" cy="87" r="3" />
                 <g class="art__seal"><circle cx="160" cy="96" r="12" /></g>
                 <circle class="sign__stamp" cx="160" cy="96" r="5" />
-                <circle class="pkt sign__key" cx="84" cy="96" r="4" />
-                <rect class="pkt sign__cert" x="185" y="90" width="14" height="12" rx="2" />
+                <g transform="translate(106 85)"><g class="key sign__key">
+                    <circle cx="-6" cy="0" r="3.5" /><path d="M-2.5 0H9M5.5 0v3M9 0v3" />
+                  </g></g>
+                <g transform="translate(214 85)"><g class="key key--signed sign__cert">
+                    <circle cx="-6" cy="0" r="3.5" /><path d="M-2.5 0H9M5.5 0v3M9 0v3" />
+                    <circle class="key__badge" cx="1" cy="-10" r="5" /><path class="key__check" d="M-1.4 -10l1.7 1.7l3-3.4" />
+                  </g></g>
                 <g class="art__label art__label--mid">
                   <text x="52" y="56">aap</text>
                   <text x="160" y="56">vault</text>
@@ -182,9 +266,8 @@
             <div class="card__body">
               <p class="card__meta"><span class="tag" data-i18n="filter.automation">Automation</span><span class="tag tag--stack">HashiCorp Vault · SSH · AAP</span></p>
               <h3 data-i18n="p2.title">Signed SSH certificates with HashiCorp Vault</h3>
-              <p data-i18n="p2.desc">On the team running Ansible Automation Platform, the automation service accounts reached virtual machines with static SSH keys. Those accounts are highly
-                privileged, and the keys were hard to track and update. I automated SSH key signing with HashiCorp Vault. No static keys are deployed any more, only certificates from the internal
-                Vault.</p>
+              <p data-i18n="p2.desc">On the team running Ansible Automation Platform, the automation service accounts reached virtual machines with static SSH keys: highly privileged, hard to track,
+                and hard to rotate. I automated SSH key signing with HashiCorp Vault. No static key is deployed any more, only certificates issued by the internal Vault.</p>
               <dl class="card__facts">
                 <div><dt data-i18n="p1.before">Before</dt><dd data-i18n="p2.before.v">Static SSH keys</dd></div>
                 <div><dt data-i18n="p1.after">After</dt><dd data-i18n="p2.after.v">Vault-signed certificates</dd></div>
@@ -231,9 +314,9 @@
             <div class="card__body">
               <p class="card__meta"><span class="tag">Kubernetes</span><span class="tag tag--stack">EKS · Helm · GitHub Actions · AWS</span></p>
               <h3 data-i18n="p3.title">Ephemeral namespaces on EKS</h3>
-              <p data-i18n="p3.desc">I was part of the project that built a tool for ephemeral namespaces in EKS. From GitHub Actions, it creates a namespace and deploys developers’ Helm charts
-                straight into it. Each namespace lives no more than 48 hours, so no resources are left hanging in the clusters. We also automated the AWS access entries that map each team’s
-                repositories to the clusters they want to deploy on.</p>
+              <p data-i18n="p3.desc">I worked on the project that built ephemeral namespaces for EKS. A GitHub Actions workflow creates a namespace and deploys developers’ Helm charts straight into
+                it. After 48 hours at most it is gone, so nothing lingers in the clusters. We also automated the AWS access entries that connect each team’s repositories to the clusters it deploys
+                to.</p>
               <dl class="card__facts">
                 <div><dt data-i18n="p3.f1">Namespace lifetime</dt><dd data-i18n="p3.f1.v">48 hours max</dd></div>
                 <div><dt data-i18n="p3.f2">Deployed from</dt><dd>GitHub Actions</dd></div>
@@ -242,75 +325,6 @@
           </li>
 
         </ul>
-      </section>
-
-      <!-- Experience -->
-      <section class="section experience" id="experience">
-        <header class="section__head">
-          <h2 data-i18n="exp.title">Experience</h2>
-        </header>
-        <ol class="roles">
-          <li class="role reveal" style="--i: 0">
-            <p class="role__when" data-i18n="exp.1.when">May 2025 – Present</p>
-            <div>
-              <h3 data-i18n="exp.1.role">Infrastructure and cloud analyst</h3>
-              <p class="role__org">Beneva</p>
-              <p data-i18n="exp.1.desc">Member of the cloud team. We give developers a flexible, secure infrastructure for deploying applications in a Kubernetes environment.</p>
-            </div>
-          </li>
-          <li class="role reveal" style="--i: 1">
-            <p class="role__when" data-i18n="exp.2.when">Aug. 2023 – May 2025</p>
-            <div>
-              <h3 data-i18n="exp.2.role">Technology analyst</h3>
-              <p class="role__org">Beneva</p>
-              <p data-i18n="exp.2.desc">Member of the automation platform team. We maintained and evolved Ansible Automation Platform, and onboarded client teams into Ansible development.</p>
-            </div>
-          </li>
-          <li class="role reveal" style="--i: 2">
-            <p class="role__when" data-i18n="exp.3.when">Aug. 2022 – Aug. 2023</p>
-            <div>
-              <h3 data-i18n="exp.3.role">Programmer</h3>
-              <p class="role__org">Beneva</p>
-              <p data-i18n="exp.3.desc">Part-time while continuing my university studies, I developed integrations for developers to make it easier to deploy their applications in the on-premise environment.</p>
-            </div>
-          </li>
-          <li class="role reveal" style="--i: 3">
-            <p class="role__when" data-i18n="exp.4.when">May 2022 – Aug. 2022</p>
-            <div>
-              <h3 data-i18n="exp.4.role">Intern</h3>
-              <p class="role__org">Beneva</p>
-              <p data-i18n="exp.4.desc">Intern in on-premise infrastructure. Our mandate was to build automated virtual machine lifecycle management with Ansible.</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <!-- Stack + education -->
-      <section class="section toolkit" id="stack">
-        <div class="toolkit__stack">
-          <h2 data-i18n="stack.title">Stack</h2>
-          <dl class="stack">
-            <div><dt data-i18n="stack.cloud">Cloud</dt><dd>AWS</dd><dd>GCP</dd></div>
-            <div><dt data-i18n="stack.platform">Platform</dt><dd>EKS</dd><dd>VMware</dd></div>
-            <div><dt data-i18n="stack.automation">Automation</dt><dd>Ansible</dd><dd>Terraform</dd></div>
-            <div><dt data-i18n="stack.lang">Languages</dt><dd>Java</dd><dd>HTML</dd></div>
-          </dl>
-        </div>
-        <div class="toolkit__edu">
-          <h2 data-i18n="edu.title">Education</h2>
-          <ul class="edu">
-            <li>
-              <p class="role__when">2020 – 2023</p>
-              <h3 data-i18n="edu.1">Bachelor’s in computer science and software engineering</h3>
-              <p class="role__org">Université du Québec à Montréal</p>
-            </li>
-            <li>
-              <p class="role__when">2018 – 2020</p>
-              <h3 data-i18n="edu.2">Certificate in administration</h3>
-              <p class="role__org">Université du Québec à Montréal</p>
-            </li>
-          </ul>
-        </div>
       </section>
 
       <!-- Recognition — the one dark band -->
@@ -332,9 +346,14 @@
       <section class="section contact" id="contact">
         <h2 data-i18n="contact.title">Get in touch.</h2>
         <div class="contact__actions">
-          <a class="icon-link icon-link--line" href="mailto:chrisremillard97@gmail.com" data-i18n-label="icon.mail" aria-label="Email Christopher" title="Email Christopher"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7.5 12 13.5l8.5-6"/></svg></a>
-          <a class="icon-link" href="https://www.linkedin.com/in/christopher-r%C3%A9millard-8165b924a" target="_blank" rel="noopener" data-linkedin data-i18n-label="icon.linkedin" aria-label="LinkedIn profile" title="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a class="icon-link" href="https://github.com/chrisremillard" target="_blank" rel="noopener" data-i18n-label="icon.github" aria-label="GitHub profile" title="GitHub profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a class="icon-link icon-link--line" href="mailto:chrisremillard97@gmail.com" data-i18n-label="icon.mail" aria-label="Email Christopher" title="Email Christopher"><svg viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3.5 7.5 12 13.5l8.5-6" /></svg></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/christopher-r%C3%A9millard-8165b924a" target="_blank" rel="noopener" data-linkedin data-i18n-label="icon.linkedin"
+            aria-label="LinkedIn profile" title="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg></a>
+          <a class="icon-link" href="https://github.com/chrisremillard" target="_blank" rel="noopener" data-i18n-label="icon.github" aria-label="GitHub profile" title="GitHub profile"><svg
+              viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg></a>
           <a class="btn btn--primary" href="assets/Christopher-Remillard-CV.pdf" download data-i18n="cta.cv">Download resume</a>
         </div>
       </section>
@@ -342,7 +361,7 @@
 
     <footer class="foot">
       <span>© 2026 Christopher Rémillard</span>
-      <span>Blainville, Québec</span>
+      <span>Montreal, Québec</span>
       <button class="foot__link" type="button" data-lang-toggle data-lang-long>Français</button>
       <button class="foot__link" type="button" data-theme-toggle data-theme-long>Dark theme</button>
       <a class="foot__link" href="https://github.com/chrisremillard/portfolio" target="_blank" rel="noopener" data-i18n="foot.source">Source code</a>

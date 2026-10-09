@@ -35,17 +35,17 @@
     "card.title": "Titre du projet",
     "card.desc": "Le problème, ce que j’ai bâti et ce qui a changé. À rédiger.",
     "p1.title": "Cycle de vie complet des machines virtuelles avec Ansible",
-    "p1.desc": "Mon projet de stage chez Beneva. Les administrateurs de systèmes créaient les machines virtuelles à la main avec des scripts, et il fallait environ deux semaines pour en obtenir une. Désormais, un formulaire Jira déclenche un automatisme Ansible qui livre une machine Linux ou Windows, prête à l’emploi dans VMware, en 20 minutes. Un second formulaire permet de supprimer la machine quand elle n’est plus requise.",
+    "p1.desc": "Mon projet de stage chez Beneva. Pour obtenir une machine virtuelle, il fallait attendre que les administrateurs de systèmes la créent à la main avec des scripts. Désormais, un formulaire Jira déclenche un automatisme Ansible qui livre une machine Linux ou Windows prête à l’emploi dans VMware, et un second formulaire la supprime quand elle n’est plus requise.",
     "p1.before": "Avant",
     "p1.before.v": "Environ 2 semaines",
     "p1.after": "Après",
     "p1.award": "Lauréat des Octas 2025",
     "p2.title": "Certificats SSH signés avec HashiCorp Vault",
-    "p2.desc": "Dans l’équipe responsable d’Ansible Automation Platform, les comptes de service d’automatisation accédaient aux machines virtuelles avec des clés SSH statiques. Ces comptes ont des privilèges élevés, et les clés étaient difficiles à suivre et à mettre à jour. J’ai automatisé la signature des clés SSH avec HashiCorp Vault. Plus aucune clé statique n’est déployée, seulement des certificats du Vault interne.",
+    "p2.desc": "Dans l’équipe responsable d’Ansible Automation Platform, les comptes de service d’automatisation accédaient aux machines virtuelles avec des clés SSH statiques : des privilèges élevés, des clés difficiles à suivre et à renouveler. J’ai automatisé la signature des clés SSH avec HashiCorp Vault. Plus aucune clé statique n’est déployée, seulement des certificats émis par le Vault interne.",
     "p2.before.v": "Clés SSH statiques",
     "p2.after.v": "Certificats signés par Vault",
     "p3.title": "Namespaces éphémères sur EKS",
-    "p3.desc": "J’ai participé au projet qui a créé un outil de namespaces éphémères dans EKS. À partir de GitHub Actions, il crée un namespace et y déploie directement les charts Helm des développeurs. Chaque namespace vit au plus 48 heures, donc aucune ressource ne traîne dans les clusters. Nous avons aussi automatisé les entrées d’accès (access entries) AWS qui associent les dépôts de chaque équipe aux clusters où elle veut déployer.",
+    "p3.desc": "J’ai participé au projet qui a bâti les namespaces éphémères sur EKS. Un workflow GitHub Actions crée un namespace et y déploie directement les charts Helm des développeurs. Après 48 heures au plus, il disparaît, et aucune ressource ne traîne dans les clusters. Nous avons aussi automatisé les entrées d’accès (access entries) AWS qui associent les dépôts de chaque équipe aux clusters où elle déploie.",
     "p3.f1": "Durée de vie d’un namespace",
     "p3.f1.v": "48 heures max",
     "p3.f2": "Déployé depuis",
@@ -134,8 +134,18 @@
   $$("[data-theme-toggle]").forEach((btn) => btn.addEventListener("click", flipTheme));
   systemDark.addEventListener("change", labelThemeToggles);
 
-  /* ---------- Reveal + live diagrams ---------- */
+  /* ---------- Reveal + diagrams ---------- */
   const reveals = $$(".reveal");
+  const arts = $$(".card__art");
+
+  // Runs a diagram's story once; the class comes off when every animation has settled.
+  function play(art) {
+    if (reducedMotion || !art.getAnimations || art.classList.contains("is-playing")) return;
+    art.classList.add("is-playing");
+    Promise.allSettled(art.getAnimations({ subtree: true }).map((a) => a.finished))
+      .then(() => art.classList.remove("is-playing"));
+  }
+
   if ("IntersectionObserver" in window) {
     const revealer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -146,25 +156,37 @@
     }, { rootMargin: "0px 0px -8% 0px" });
     reveals.forEach((el) => revealer.observe(el));
 
-    // Diagrams only run while their card is on screen.
-    const liveness = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => entry.target.classList.toggle("is-live", entry.isIntersecting));
-    }, { threshold: 0.25 });
-    $$(".card").forEach((card) => liveness.observe(card));
+    // Each diagram plays by itself the first time it is properly on screen.
+    const firstPlay = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        play(entry.target);
+        firstPlay.unobserve(entry.target);
+      });
+    }, { threshold: 0.6 });
+    arts.forEach((art) => firstPlay.observe(art));
   } else {
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
-  /* ---------- Hero: one line types in, once ---------- */
-  const typed = $("[data-typed]");
-  if (typed && !reducedMotion) {
-    const text = typed.dataset.typed;
-    typed.textContent = "";
-    let i = 0;
-    setTimeout(function step() {
-      typed.textContent = text.slice(0, ++i);
-      if (i < text.length) setTimeout(step, 70);
-    }, 700);
+  // After that it replays on intent only: mouse over the card, keyboard focus inside it, or a tap on the diagram.
+  arts.forEach((art) => {
+    const card = art.closest(".card");
+    card.addEventListener("pointerenter", (event) => { if (event.pointerType === "mouse") play(art); });
+    card.addEventListener("focusin", () => play(art));
+    art.addEventListener("click", () => play(art));
+  });
+
+  /* ---------- Hero: the phase flips from Pending to Running, once ---------- */
+  const phases = $$("[data-phase]");
+  if (phases.length && !reducedMotion) {
+    phases.forEach((el) => { el.textContent = "Pending"; });
+    setTimeout(() => {
+      phases.forEach((el) => el.classList.add("is-out"));
+      setTimeout(() => {
+        phases.forEach((el) => { el.textContent = el.dataset.phase; el.classList.remove("is-out"); });
+      }, 220); // --dur-short
+    }, 1200);
   }
 
   /* ---------- Project filters ---------- */
@@ -173,15 +195,20 @@
   const chips = $$("[data-filter]");
   const count = $("[data-count]");
   chips.forEach((chip) => chip.addEventListener("click", () => {
+    if (chip.getAttribute("aria-pressed") === "true") return;
     const filter = chip.dataset.filter;
     chips.forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
     grid.dataset.active = filter;
     let shown = 0;
+    let entering = 0;
     cards.forEach((card) => {
       const match = filter === "all" || card.dataset.cat === filter;
+      const wasHidden = card.hidden;
       card.hidden = !match;
       if (!match) return;
-      card.style.setProperty("--i", shown++);
+      shown++;
+      if (!wasHidden) return; // already on screen: leave it alone
+      card.style.setProperty("--i", entering++);
       card.classList.remove("is-in");
       void card.offsetWidth; // restart the fade
       card.classList.add("is-in");
@@ -213,9 +240,9 @@
   const paletteEmpty = $("[data-palette-empty]");
   const go = (hash) => () => { location.hash = hash; };
   const commands = [
-    { en: "Go to projects", fr: "Aller aux projets", hint: "#projects", run: go("#projects") },
     { en: "Go to experience", fr: "Aller à l’expérience", hint: "#experience", run: go("#experience") },
     { en: "Go to stack and education", fr: "Aller aux technologies et à la formation", hint: "#stack", run: go("#stack") },
+    { en: "Go to projects", fr: "Aller aux projets", hint: "#projects", run: go("#projects") },
     { en: "Go to recognition", fr: "Aller aux distinctions", hint: "#recognition", run: go("#recognition") },
     { en: "Watch the Octas project video", fr: "Voir la vidéo du projet Octas", hint: "vimeo ↗", run: () => { window.open("https://vimeo.com/1078170795", "_blank", "noopener"); } },
     { en: "Go to contact", fr: "Aller au contact", hint: "#contact", run: go("#contact") },
